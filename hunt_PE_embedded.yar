@@ -5,6 +5,7 @@ rule hunt_PE_embedded {
         author                = "Bartek Jerzman"
         description           = "Hunting for PE files embedded in other PE files"
         reference             = "https://yara.readthedocs.io/en/stable/writingrules.html#iterating-over-string-occurrences"
+	vt_search	      = "tag:contains-pe and type:peexe"
   strings:
 
         $mz =  { 4D 5A }
